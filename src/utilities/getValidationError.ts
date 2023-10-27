@@ -13,6 +13,10 @@ export const getValidationError = (errorCode:string) =>{
     FORBIDDEN:"You don't have permission to execute that",
     INTERNAL_SERVER_ERROR: "There has been an error, please try again later",
     EMAIL_IN_ACCOUNT: "The entered email already has an account, please enter a new one",
+   'auth/email-already-in-use':"The email already in use"
   }
-  return codeMatcher[errorCode];
+  const codeMatcherFirebase:TypeWithKey<string> = {
+    'auth/email-already-in-use':"The email already in use"
+  }
+  return codeMatcher[errorCode] || codeMatcherFirebase[errorCode] || 'error';
 }

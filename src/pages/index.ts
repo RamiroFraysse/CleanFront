@@ -1,5 +1,10 @@
 export * from './home';
 export * from './home/styled-components';
 export * from './index';
-export { default as Practice } from './practice/Practice';
-export { default as PracticeEB } from './practice/PracticeEB';
+export { default as Dashboard } from './private/Dashboard/Dashboard';
+export { default as Home } from './private/Home/Home';
+export { default as Private } from './private/Private';
+export { default as LoginPage } from './public/Login/LoginPage';
+export { default as Practice } from './public/Practice/Practice';
+export { default as PracticeEB } from './public/Practice/PracticeEB';
+export { default as RegisterPage } from './public/Register/RegisterPage';

@@ -1,3 +1,3 @@
 export * from './index';
 export * from './typeWithKey';
-export * from './user.type';
+export * from './userInterface';

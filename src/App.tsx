@@ -1,17 +1,23 @@
 import "./App.css";
 import { SnackbarProvider } from "notistack";
-import Practice from "@/pages/practice/Practice";
 import { SnackbarUtilitiesConfigurator } from "@/utilities/snackbarManager";
+import { Suspense } from "react";
+import { Navigation } from "@/routes";
+import { Provider } from "react-redux";
+import store from "@/redux/store";
 // import { PracticeEB } from "@/pages";
 
 function App() {
   return (
-    <div className="App">
-      <SnackbarProvider>
-        <SnackbarUtilitiesConfigurator />
-        <Practice />;
-      </SnackbarProvider>
-      {/* <PracticeEB /> */}
+    <div className="app">
+      <Suspense fallback={<>Cargando</>}>
+        <Provider store={store}>
+          <SnackbarProvider>
+            <SnackbarUtilitiesConfigurator />
+            <Navigation />
+          </SnackbarProvider>
+        </Provider>
+      </Suspense>
     </div>
   );
 }
