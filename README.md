@@ -4,7 +4,7 @@
 
 Welcome to CleanFront, a GitHub reference project designed to provide a solid foundation for implementing and structuring Clean Architecture at the frontend level. Tailored for those seeking to grasp and adopt best practices in frontend application development, CleanFront not only serves as a clear example of Clean Architecture but also includes a straightforward implementation of authentication using Firebase for security management. The project further showcases effective application state management through the utilization of Redux.
 
-Explore this repository for a detailed insight into organizing, structuring, and maintaining robust and scalable frontend code with Clean Architecture. But that's not all! CleanFront also serves as a guide for efficient error handling, demonstrates the use of lazy loading for module loading efficiency, and provides guidance on setting up effective public and private routing in a React application. We hope you find this reference invaluable on your development journey!
+Explore this repository for a detailed insight into organizing, structuring, and maintaining robust and scalable frontend code with Clean Architecture. But that's not all! CleanFront also serves as a guide for efficient error handling, demonstrates the use of lazy loading for module loading efficiency, and provides guidance on setting up effective public and private routing in a React application. I hope you find this reference invaluable on your development journey!
 
 ### Feautures
 
@@ -37,7 +37,7 @@ Explore this repository for a detailed insight into organizing, structuring, and
 
 ## Installation
 
-- git clone https://github.com/RamiroFraysse/clean-arch
-  cd challenge-improvein
+- git clone https://github.com/RamiroFraysse/CleanFront
+  cd CleanFront
 
 - Install dependencies: pnpm | npm install
