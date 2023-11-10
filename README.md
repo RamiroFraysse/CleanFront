@@ -38,6 +38,6 @@ Explore this repository for a detailed insight into organizing, structuring, and
 ## Installation
 
 - git clone https://github.com/RamiroFraysse/clean-arch
-  cd challenge-improvein
+  cd clean-arch
 
 - Install dependencies: pnpm | npm install
