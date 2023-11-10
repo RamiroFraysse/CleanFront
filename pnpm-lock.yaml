@@ -35,8 +35,8 @@ dependencies:
     specifier: ^6.17.0
     version: 6.17.0(react-dom@18.2.0)(react@18.2.0)
   rf-sb-components:
-    specifier: ^1.0.2
-    version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.4.0
+    version: 1.4.0(react-dom@18.2.0)(react@18.2.0)
   styled-components:
     specifier: ^5
     version: 5.3.10(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
@@ -2541,8 +2541,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rf-sb-components@1.0.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-6b8btcqBDQsEuXuFhFOXQSbQjXQQ/CW0GeSnBVO02VK7TN/vSEhZsGrP+K1Me17NYm8JI/vMepI4hBtUkIMGXA==}
+  /rf-sb-components@1.4.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-T4dbukENT08nSPtPelk0YtzEcUo28bb03YtLUU5D8F5rPBXGzyAD0GPjpIDLB/QXyDWI+Ce7CJkkjGBOnYdXqQ==}
     peerDependencies:
       react: ^16.8.0
       react-dom: ^16.8.0

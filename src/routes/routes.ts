@@ -5,8 +5,5 @@ export const PublicRoutes = {
 
 export const PrivateRoutes={
   PRIVATE:'private',
-  HOME:'home',
-  DASHBOARD:'dashboard'
+  BANDS:'bands',
 }
-
-//ramirofraysse/private/dashboard

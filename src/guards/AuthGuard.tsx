@@ -17,9 +17,7 @@ export const AuthGuard = ({ privateValidation }: Props) => {
     return store.user;
   });
 
-  console.log({ userState });
-
-  return userState.name !== "" ? (
+  return userState.email !== "" ? (
     privateValidation ? (
       PrivateValidationFragment
     ) : (

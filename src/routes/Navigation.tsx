@@ -3,12 +3,10 @@ import { PrivateRoutes, PublicRoutes } from "./routes";
 import AuthGuard from "../guards/AuthGuard";
 import RoutesWithNotFound from "./RoutesWithNotFound";
 import { lazy } from "react";
-import { Logout } from "@/components";
+import RegisterPage from "@/pages/public/Register/RegisterPage";
 
 const Login = lazy(() => import("../pages/public/Login/LoginPage"));
-const Register = lazy(() => import("../pages/public/Register/RegisterPage"));
-
-const Private = lazy(() => import("../pages/private/Private"));
+const Private = lazy(() => import("../pages/private/routes/PrivateNavigation"));
 
 export default function Navigation() {
   return (
@@ -17,8 +15,7 @@ export default function Navigation() {
       <RoutesWithNotFound>
         <Route path="/" element={<Navigate to={PrivateRoutes.PRIVATE} />} />
         <Route path={PublicRoutes.LOGIN} element={<Login />} />
-        <Route path={PublicRoutes.REGISTER} element={<Register />} />
-
+        <Route path={PublicRoutes.REGISTER} element={<RegisterPage />} />
         <Route element={<AuthGuard privateValidation={true} />}>
           <Route path={`${PrivateRoutes.PRIVATE}/*`} element={<Private />} />
         </Route>

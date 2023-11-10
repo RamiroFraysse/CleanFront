@@ -4,6 +4,11 @@ export interface IUser{
   email:string;
 }
 
+export interface IUserForm{
+  email:string;
+  password:string;
+}
+
 export const UserEmptyState : IUser = {
   id: '', 
   name:'',

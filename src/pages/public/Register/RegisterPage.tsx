@@ -1,49 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { createUser } from "@/redux/slices/userSlice";
-import { registerUser } from "@/services/authService";
-import { PrivateRoutes, PublicRoutes } from "@/routes";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router";
-import { Login } from "rf-sb-components";
-import * as Yup from "yup";
-import { SnackbarUtilities, getValidationError } from "@/utilities";
+import { PublicRoutes } from "@/routes";
+import { AccessForm } from "rf-sb-components";
 import { LinkStyled, SpanStyled } from "@/styled-components";
+import { validationSchemaAccessForm } from "../utilities";
+import useAuth from "@/hooks/useAuth";
 
 function RegisterPage() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const register = async ({ email, password }: any) => {
-    try {
-      const result = await registerUser(email, password);
-      dispatch(
-        createUser({
-          email: result.user.email,
-          id: result.user.uid,
-          name: result.user.displayName,
-        })
-      );
-      navigate(`/${PrivateRoutes.PRIVATE}`, { replace: true });
-      console.log({ result });
-    } catch (error: any) {
-      console.log({ code: error.code });
-      SnackbarUtilities.error(getValidationError(error.code));
-    }
-  };
+  const { register } = useAuth();
 
   return (
     <>
-      <Login
+      <AccessForm
         formTitle="Register and Exploring Clean Architecture Principles and Best Practices"
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         onSubmit={register}
-        validationSchema={Yup.object({
-          email: Yup.string()
-            .email("Invalid email format")
-            .required("Required"),
-          password: Yup.string()
-            .min(6, "Password must contain at least 6 characters")
-            .required("Required"),
-        })}
+        validationSchema={validationSchemaAccessForm}
         initialValues={{ email: "", password: "" }}
         fields={[
           {

@@ -6,6 +6,7 @@ export interface AppStore {
   user: IUser;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default configureStore<AppStore>({
   reducer: {
     user: userReducer,
