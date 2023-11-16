@@ -15,6 +15,12 @@ const Home = lazy(() => import("../Home/HomePage"));
 
 function Private() {
   const { logout } = useAuth();
+  // const navLinks = [
+  //   {
+  //     label: "Clean architecture",
+  //     toUrl: "",
+  //   },
+  // ];
   const navActions = [
     {
       label: "logout",
@@ -27,17 +33,18 @@ function Private() {
     <>
       <Navbar
         background={`linear-gradient(to right, ${MAIN_GREEN_COLOR}, ${SECONDARY_BLUE_COLOR})`}
-        stylesNav={{ position: "fixed", zIndex: 1 }}
+        stylesNav={{ position: "sticky", zIndex: 1 }}
         stylesActions={{
           backgroundColor: `${MAIN_BLUE_COLOR}`,
           color: "#fff",
         }}
         logo={<a>{Logo({ width: "100", height: "50" })}</a>}
         navActions={navActions}
+        // navLinks={navLinks}
       />
       <RoutesWithNotFound>
-        <Route path="/" element={<Navigate to={PrivateRoutes.BANDS} />} />
-        <Route path={PrivateRoutes.BANDS} element={<Home />} />
+        <Route path="/" element={<Navigate to={PrivateRoutes.HOME} />} />
+        <Route path={PrivateRoutes.HOME} element={<Home />} />
       </RoutesWithNotFound>
     </>
   );

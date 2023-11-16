@@ -1,4 +1,10 @@
+import SectionCleanArchitecture from "./components/SectionCleanArchitecture";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <SectionCleanArchitecture />
+    </div>
+  );
 }
 export default Home;

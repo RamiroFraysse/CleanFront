@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { PublicRoutes } from "@/routes";
 import { AccessForm } from "rf-sb-components";
-import { LinkStyled, SpanStyled } from "@/styled-components";
+import { LinkStyled, Span } from "@/styled-components";
 import { validationSchemaAccessForm } from "../utilities";
 import useAuth from "@/hooks/useAuth";
 
@@ -36,13 +36,13 @@ function RegisterPage() {
           },
         ]}
       />
-      <SpanStyled>
+      <Span>
         Do you have an account already? Please{" "}
         <LinkStyled to={`/${PublicRoutes.LOGIN}`} replace={true}>
           login
         </LinkStyled>{" "}
         to get started.
-      </SpanStyled>
+      </Span>
     </>
   );
 }
