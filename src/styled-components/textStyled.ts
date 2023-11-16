@@ -42,6 +42,7 @@ export const Article = styled.article`
     margin:auto;
     text-size-adjust:100%;
     text-align:left;
+    padding:2rem;
 `
 
 export const Section = styled.section`
@@ -52,5 +53,6 @@ export const Section = styled.section`
 export const Img = styled.img`
     margin:auto;
     display:flex;
+    max-width:100%;
 `
 
