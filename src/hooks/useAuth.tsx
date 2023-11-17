@@ -11,7 +11,6 @@ export function useAuth() {
   const navigate = useNavigate();
 
   const createUserAndNavigate = ({ email, id, name }: IUser) => {
-    console.log("dispatch");
     dispatch(
       createUser({
         email: email,
@@ -19,7 +18,6 @@ export function useAuth() {
         name: name,
       })
     );
-    console.log("navigate");
     navigate(`/${PrivateRoutes.PRIVATE}`, { replace: true });
   };
 
