@@ -35,6 +35,7 @@ export const P = styled.p`
     letter-spacing: -0.06px;
     margin-bottom: -0.46em;
     margin-top:0.86em;
+    text-wrap:pretty;
 `
 
 export const Article = styled.article`

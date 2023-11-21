@@ -38,7 +38,7 @@ function Private() {
           backgroundColor: `${MAIN_BLUE_COLOR}`,
           color: "#fff",
         }}
-        logo={<a>{Logo({ width: "100", height: "50" })}</a>}
+        logo={Logo({ width: "100", height: "50" })}
         navActions={navActions}
         // navLinks={navLinks}
       />
