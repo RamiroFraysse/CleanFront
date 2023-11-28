@@ -9,7 +9,7 @@ import {
   MAIN_GREEN_COLOR,
   SECONDARY_BLUE_COLOR,
 } from "@/utilities";
-import Logo from "@/assets/Logo";
+import Logo from "@/components/icons/Logo";
 
 const Home = lazy(() => import("../Home/HomePage"));
 

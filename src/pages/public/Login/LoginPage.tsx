@@ -4,9 +4,10 @@ import { AccessForm } from "rf-sb-components";
 import { Span, LinkStyled } from "@/styled-components";
 import { validationSchemaAccessForm } from "../utilities";
 import useAuth from "@/hooks/useAuth";
+import { Spinner } from "@/components/icons";
 
 function LoginPage() {
-  const { login } = useAuth();
+  const { isLoading, login } = useAuth();
 
   return (
     <>
@@ -15,6 +16,8 @@ function LoginPage() {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
         onSubmit={login}
+        labelBtnSubmit={isLoading ? <Spinner /> : "Submit"}
+        btnSubmitProps={{ disabled: isLoading }}
         validationSchema={validationSchemaAccessForm}
         initialValues={{ email: "", password: "" }}
         fields={[
