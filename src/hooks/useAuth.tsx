@@ -65,7 +65,7 @@ export function useAuth() {
       await logoutUser();
       dispatch(resetUser());
       setIsLoading(false);
-      navigate(`${PublicRoutes.LOGIN}`, { replace: true });
+      navigate(`/${PublicRoutes.LOGIN}`, { replace: true });
       // eslint-disable-next-line
     } catch (error: any) {
       console.log({ code: error.code });
