@@ -10,7 +10,6 @@ import {
   SECONDARY_BLUE_COLOR,
 } from "@/utilities";
 import Logo from "@/components/icons/Logo";
-import DomainLayer from "../DomainLayer/DomainLayer";
 
 const Home = lazy(() => import("../Home/HomePage"));
 

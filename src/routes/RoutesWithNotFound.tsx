@@ -1,4 +1,4 @@
-import { H1, H2 } from "@/styled-components";
+import { H2 } from "@/styled-components";
 import { Route, Routes } from "react-router";
 
 interface Props {
