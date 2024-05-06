@@ -46,7 +46,6 @@ function Private() {
       <RoutesWithNotFound>
         <Route path="/" element={<Navigate to={PrivateRoutes.HOME} />} />
         <Route path={PrivateRoutes.HOME} element={<Home />} />
-        <Route path={PrivateRoutes.DOMAINLAYER} element={<DomainLayer />} />
       </RoutesWithNotFound>
     </div>
   );
