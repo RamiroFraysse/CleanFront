@@ -1,3 +1,4 @@
+import { H1, H2 } from "@/styled-components";
 import { Route, Routes } from "react-router";
 
 interface Props {
@@ -8,7 +9,7 @@ export const RoutesWithNotFound = ({ children }: Props) => {
   return (
     <Routes>
       {children}
-      <Route path="*" element={<div>Not found</div>} />
+      <Route path="*" element={<H2 $color="red">Route not found</H2>} />
     </Routes>
   );
 };

@@ -10,6 +10,7 @@ import {
   SECONDARY_BLUE_COLOR,
 } from "@/utilities";
 import Logo from "@/components/icons/Logo";
+import DomainLayer from "../DomainLayer/DomainLayer";
 
 const Home = lazy(() => import("../Home/HomePage"));
 
@@ -30,10 +31,10 @@ function Private() {
     },
   ];
   return (
-    <>
+    <div style={{ minHeight: "100vh" }}>
       <Navbar
         background={`linear-gradient(to right, ${MAIN_GREEN_COLOR}, ${SECONDARY_BLUE_COLOR})`}
-        stylesNav={{ position: "sticky", zIndex: 1 }}
+        stylesNav={{ position: "sticky", top: 0, zIndex: 1 }}
         stylesActions={{
           backgroundColor: `${MAIN_BLUE_COLOR}`,
           color: "#fff",
@@ -45,8 +46,9 @@ function Private() {
       <RoutesWithNotFound>
         <Route path="/" element={<Navigate to={PrivateRoutes.HOME} />} />
         <Route path={PrivateRoutes.HOME} element={<Home />} />
+        <Route path={PrivateRoutes.DOMAINLAYER} element={<DomainLayer />} />
       </RoutesWithNotFound>
-    </>
+    </div>
   );
 }
 export default Private;
